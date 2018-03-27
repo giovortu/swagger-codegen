@@ -213,8 +213,8 @@ public class PistacheServerCodegen extends AbstractCppCodegen {
 
                 //TODO: This changes the info about the real type but it is needed to parse the header params
                 if (param.isHeaderParam) {
-                    param.dataType = "Optional<Net::Http::Header::Raw>";
-                    param.baseType = "Optional<Net::Http::Header::Raw>";
+                    param.dataType = "Optional<Http::Header::Raw>";
+                    param.baseType = "Optional<Http::Header::Raw>";
                 } else if(param.isQueryParam){
                     if(param.isPrimitiveType) {
                         param.dataType = "Optional<" + param.dataType + ">";
