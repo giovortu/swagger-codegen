@@ -15,6 +15,8 @@ namespace {{this}} {
 {{/apiNamespaceDeclarations}}
 
 using namespace {{modelNamespace}};
+using namespace Pistache;
+
 
 {{classname}}::{{classname}}( std::shared_ptr<ApiClient> apiClient )
     : m_ApiClient(apiClient)
