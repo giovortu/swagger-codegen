@@ -2,6 +2,13 @@
 # Created by Giovanni Ortu (giovanni.ortu@abinsula.com) {{generatedDate}}
 ######################################################################################
 
+#Include paths
+
+QMAKE_CXXFLAGS += -Wno-unused-parameter -fPIC
+
+INCLUDEPATH += $$PWD/model \
+               $$PWD/api \
+               $$PWD/impl
 
 {{=<% %>=}}
 
@@ -47,6 +54,10 @@ HEADERS += $$PWD/model/ModelBase.h \
            $$PWD/model/<%classname%>.h \
 <%/model%>
 <%/models%>
+
+#Libraries
+
+LIBS+= -lpistache
 
 
 <%={{ }}=%>

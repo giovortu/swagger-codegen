@@ -1,0 +1,11 @@
+#!/bin/bash
+
+touch ./modules/swagger-codegen/src/main/java/io/swagger/codegen/languages/PistacheServerCodegen.java
+rm ./modules/swagger-codegen-cli/target/swagger-codegen-cli.jar 
+./mvnw clean  package -Dmaven.test.skip=true 
+cp ./modules/swagger-codegen-cli/target/swagger-codegen-cli.jar /data/Bin/
+cp ./modules/swagger-codegen-cli/target/swagger-codegen-cli.jar /data/Lavoro/TOPCON/DataLogger/tools/
+cp ./modules/swagger-codegen-cli/target/swagger-codegen-cli.jar /data/Lavoro/TOPCON/AM55Framework/tools/
+
+
+
