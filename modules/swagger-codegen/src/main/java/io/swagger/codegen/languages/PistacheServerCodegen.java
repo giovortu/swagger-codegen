@@ -78,7 +78,7 @@ public class PistacheServerCodegen extends AbstractCppCodegen {
 
         supportingFiles.add(new SupportingFile("modelbase-header.mustache", "model", "ModelBase.h"));
         supportingFiles.add(new SupportingFile("modelbase-source.mustache", "model", "ModelBase.cpp"));
-        supportingFiles.add(new SupportingFile("cmake.mustache", "", "CMakeLists.txt"));
+        //supportingFiles.add(new SupportingFile("cmake.mustache", "", "CMakeLists.txt"));
         supportingFiles.add(new SupportingFile("qmake.mustache", "", "RestAPI.pro"));
         supportingFiles.add(new SupportingFile("json.hpp", "", "model/json.hpp"));
         //supportingFiles.add(new SupportingFile("README.mustache", "", "README.md"));
