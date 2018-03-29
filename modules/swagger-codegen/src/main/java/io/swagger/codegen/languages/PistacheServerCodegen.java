@@ -81,7 +81,7 @@ public class PistacheServerCodegen extends AbstractCppCodegen {
         supportingFiles.add(new SupportingFile("cmake.mustache", "", "CMakeLists.txt"));
         supportingFiles.add(new SupportingFile("qmake.mustache", "", "RestAPI.pro"));
         supportingFiles.add(new SupportingFile("json.hpp", "", "model/json.hpp"));
-        supportingFiles.add(new SupportingFile("README.mustache", "", "README.md"));
+        //supportingFiles.add(new SupportingFile("README.mustache", "", "README.md"));
 
         languageSpecificPrimitives = new HashSet<String>(
                 Arrays.asList("int", "char", "bool", "long", "float", "double", "int32_t", "int64_t"));
