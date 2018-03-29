@@ -2,16 +2,6 @@
 # Created by Giovanni Ortu (giovanni.ortu@abinsula.com) {{generatedDate}}
 ######################################################################################
 
-TARGET=RestAPI
-TEMPLATE=lib
- 
-CONFIG+=c++11
-
-INCLUDEPATH+=model api impl
-
-MOC_DIR=moc
-OBJECTS_DIR=obj
-UI_DIR=ui
 
 {{=<% %>=}}
 
@@ -19,42 +9,42 @@ UI_DIR=ui
 
 SOURCES +=  \
 <%#apiInfo.apis%>
-<%#operations%>
-           api/<%classname%>.cpp \
+<%#operations%> 
+           $$PWD/api/<%classname%>.cpp \
 <%/operations%>
 <%/apiInfo.apis%>
 <%#apiInfo.apis%>
 <%#operations%>
-           impl/<%classname%>Impl.cpp \
+           $$PWD/impl/<%classname%>Impl.cpp \
 <%/operations%>
 <%/apiInfo.apis%>
 
 HEADERS += \
 <%#apiInfo.apis%>
 <%#operations%>
-           api/<%classname%>.h \
+           $$PWD/api/<%classname%>.h \
 <%/operations%>
 <%/apiInfo.apis%>
 <%#apiInfo.apis%>
 <%#operations%>
-           impl/<%classname%>Impl.h \
+           $$PWD/impl/<%classname%>Impl.h \
 <%/operations%>
 <%/apiInfo.apis%>
 
 #Models
 
-SOURCES += model/ModelBase.cpp \
+SOURCES += $$PWD/model/ModelBase.cpp \
 <%#models%>
 <%#model%>
-           model/<%classname%>.cpp \
+           $$PWD/model/<%classname%>.cpp \
 <%/model%>
 <%/models%>
 
 
-HEADERS += model/ModelBase.h \
+HEADERS += $$PWD/model/ModelBase.h \
 <%#models%>
 <%#model%>
-           model/<%classname%>.h \
+           $$PWD/model/<%classname%>.h \
 <%/model%>
 <%/models%>
 

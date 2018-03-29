@@ -79,7 +79,8 @@ public class PistacheServerCodegen extends AbstractCppCodegen {
         supportingFiles.add(new SupportingFile("modelbase-header.mustache", "model", "ModelBase.h"));
         supportingFiles.add(new SupportingFile("modelbase-source.mustache", "model", "ModelBase.cpp"));
         //supportingFiles.add(new SupportingFile("cmake.mustache", "", "CMakeLists.txt"));
-        supportingFiles.add(new SupportingFile("qmake.mustache", "", "RestAPI.pro"));
+        supportingFiles.add(new SupportingFile("pro.mustache", "", "RestAPI.pro"));
+        supportingFiles.add(new SupportingFile("pri.mustache", "", "restAPI.pri"));
         supportingFiles.add(new SupportingFile("json.hpp", "", "model/json.hpp"));
         //supportingFiles.add(new SupportingFile("README.mustache", "", "README.md"));
 
@@ -88,7 +89,7 @@ public class PistacheServerCodegen extends AbstractCppCodegen {
 
         typeMapping = new HashMap<String, String>();
         typeMapping.put("date", "std::string");
-        typeMapping.put("DateTime", "std::string");
+        typeMapping.put("DateTime", "std::string"); 
         typeMapping.put("string", "std::string");
         typeMapping.put("integer", "int32_t");
         typeMapping.put("long", "int64_t");
