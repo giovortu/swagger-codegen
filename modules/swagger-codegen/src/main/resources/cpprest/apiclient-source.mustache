@@ -8,7 +8,6 @@ namespace {{this}} {
 {{/apiNamespaceDeclarations}}
 
 using namespace {{modelNamespace}};
-using namespace Pistache;
 
 ApiClient::ApiClient(std::shared_ptr<ApiConfiguration> configuration )
     : m_Configuration(configuration)
@@ -46,6 +45,11 @@ utility::string_t ApiClient::parameterToString(int32_t value)
 }
 
 utility::string_t ApiClient::parameterToString(float value)
+{
+    return utility::conversions::to_string_t(std::to_string(value));
+}
+
+utility::string_t ApiClient::parameterToString(double value)
 {
     return utility::conversions::to_string_t(std::to_string(value));
 }
